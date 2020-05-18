@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
 {% seo %}
   </head>
 
   <body>
 
     <!-- HEADER -->
-    <div id="particles-js" style="background-image: url('https://yk-liu.github.io/about/Moon.png');background-size: 20%;background-repeat: no-repeat;background-position: 80% 20%;">
+    <div id="particles-js" style="background-image: url('./assets/images/nyan_cat.gif');background-size: 20%;background-repeat: no-repeat;background-position: 80% 50%;">
         <div class="header">
 
           <h1> 
@@ -33,11 +34,38 @@
         {{ content }}
       </section>
 
-      <section id="main_content" class="inner"> Visitor History
-      <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=080808&w=500&t=tt&d=0sl-VPFf6JYZu5gABNUagYYPE8eVIua7qE_D57Ji-2o&co=ffffff&ct=7e7676&cmo=14a5e9&cmn=11df11"></script>
-      </section>
+      <div id="main_content" class="inner"> 
+        <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=500&t=n&d=0sl-VPFf6JYZu5gABNUagYYPE8eVIua7qE_D57Ji-2o&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script>
+      </div>
+
+      {% if page.comments %}
+      <div id="disqus_thread"></div>
+      <script>
+    
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-cctt1014-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    {% endif %}
 
     </div>
+
+    
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">

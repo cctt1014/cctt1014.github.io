@@ -1,5 +1,6 @@
 ---
 layout: home
+comments: true
 ---
 
 ## Homepage
